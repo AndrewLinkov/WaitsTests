@@ -1,4 +1,4 @@
-package rosAtom.tests;
+package rosAtom.tests.waitsTests;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -10,9 +10,8 @@ import static org.junit.jupiter.api.Assertions.fail;
 
 public class ExpectedConditionsUITests extends BaseTest {
 
-
     @Test
-    @DisplayName("Проверка загрузки главной страницы Росатома")
+    @DisplayName("Проверка раздела 'Журналистам'. Используем явные ожидания ExpectedConditions.")
     public void testPageTitleContainsRosatom() {
 
         try {
@@ -28,9 +27,8 @@ public class ExpectedConditionsUITests extends BaseTest {
                             String.format("Текущий URL должен начинаться с %s. Актуальный URL: %s",
                                     baseUrl, driver.getCurrentUrl()))
             );
-
         } catch (Exception e) {
-            fail("Ошибка при выполнении теста: " + e.getMessage(), e);
+            throw new AssertionError("Ошибка: " + e.getMessage(), e);
         }
     }
 }
