@@ -11,7 +11,7 @@ import static org.junit.jupiter.api.Assertions.fail;
 public class ExpectedConditionsUITests extends BaseTest {
 
     @Test
-    @DisplayName("Проверка раздела 'Журналистам'. Используем явные ожидания ExpectedConditions.")
+    @DisplayName("Проверка раздела 'Журналистам'. Используем набор условий ExpectedConditions.")
     public void testPageTitleContainsRosatom() {
 
         try {
